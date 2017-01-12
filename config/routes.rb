@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
+  get 'post/create'
+
   devise_for :users
   root 'pages#index'
+  resources :posts
   
   get 'index' => 'pages#index'
 
