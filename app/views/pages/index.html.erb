@@ -16,62 +16,45 @@
              color: white;
              font-weight: bold;
          }
-         .container-index {
-             margin-right: 15%;
-             margin-left: 15%;
-         }
-         .text {
-             color: white;
-             font-weight: 300;
-             font-size: 150%;
-         }
-         .footer-links {
-             text-align: center;
-             color: white;
-             margin-top: 30%;
-             font-size: 75%;
-         }
-         .log-in {
-             float: right;
-             width: 300px;
-             height: 150px;
-             margin-top: 7.5%;
-         }
-         .sign-up {
-             float: right;
-             width: 300px;
-             height: 250px;
-         }
-         .log-in-form {
-             margin: 5px;
-         }
+
+
      </style>
      
-     <div class="container-index row">
-         <div class="col-sm-6">
-             <h1>Welcome to Twitterz.</h1>
-             <p class="text">
+     <div class="row">
+  <div class="col-lg-10 col-lg-offset-1">
+    <div class="row">
+      <div id="landing-content" class="col-lg-9">
+       <h1>Welcome to Twitterz.</h1>
+        <p class="text">
                 Developed for the redrocket challenge<br>
                 Share your main features of twitter. <br>
-                Simple twitter clone!
+                Simple twitter clone! <%= link_to "EXPLORE", explore_path, class: "text text-explore" %>
              </p>
-         </div>
-         <div class="col-sm-6">
-                    <div class="log-in panel">
-                        Log In
-                     </div> 
-                     
-                    <div class="sign-up panel">
-                         Sign Up
-                    </div> 
-         </div>
-         
-         <div class="col-sm-12">
-             <p class="footer-links">About  Help  Blog  Status  Terms  Privacy  © 2017<a href="https://www.facebook.com/vander.wander">Desenvolvedor</a></p>
-         </div>
-         
-     </div>
- 
+        <p class="text">
+          Checkout the Source code on <a href="https://github.com/vanderL/DesafioRedRails-Vander">Github</a>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <div class="row">
+          <div class="well">
+            <%= render "devise/sessions/form" %>
+            <%= link_to "Forgot your password?", new_password_path(:user) %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Create an Account</h3>
+            </div>
+            <div class="panel-body">
+              <%= render "devise/registrations/form" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
  <% else  %>
  
 <script>document.location = "/home"</script> 

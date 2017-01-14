@@ -8,14 +8,13 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-       <%= link_to "Twitterzin", root_path, :class => "navbar-brand"%>
+       <%= link_to image_tag('/icon.png'), root_path, :class => "navbar-brand"%>
      </div>
  
      <!-- Collect the nav links, forms, and other content for toggling -->
      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
        <ul class="nav navbar-nav">
-         <li><%= link_to "Home",home_path %> <span class="sr-only">(current)</span></a></li>
-         <li><%= link_to "Explore", explore_path %></a></li>
+         <li id="explore" class="explore"><%= link_to "Explore", explore_path %></a></li>
        </ul>
        <ul class="nav navbar-nav navbar-right">
                  <form class="navbar-form navbar-right" role="search">
@@ -24,7 +23,6 @@
              </div>
              <button type="submit" class="btn btn-default">Submit</button>
            </form>
-         <li><a href="#">Tweet</a></li>
          <li class="dropdown">
            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -39,3 +37,4 @@
      </div><!-- /.navbar-collapse -->
    </div><!-- /.container-fluid -->
  </nav>
+

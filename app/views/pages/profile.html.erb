@@ -1,5 +1,4 @@
-
- <div class="row">
+<div class="row">
      <div class="col-xs-3">
          <div class="col-sm-12" style="margin-top: -200px;">
               <img src="/avatar.png" height="200px" width="200px" class="rounded-img">
@@ -21,7 +20,12 @@
                     <img src="/avatar.png" class="rounded-img" height="50px" width="50px"></img>
                   </div>
                   <div class="col-sm-11">
-                    <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).email %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
+                    <p class="post-title">
+                        <span class="post-owner">
+                            <a href="/user/<%= @p.user_id %>">
+                                <%= User.find(@p.user_id).email %>
+                            </a>
+                        </span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
                     <p class="post-content"><%= @p.content %></p>
                   </div>
                   
@@ -40,6 +44,7 @@
         <% end %>
      </div>
      <div class="col-xs-3">
+         <%= render '/twitters/follow_button', :user => User.find_by_id(params[:id]) %>
          <div class="panel panel-default">
              <div class="panel-body">
                 <h5 style="color: grey; font-size: 125%;">Who to follow</h5>
@@ -50,7 +55,13 @@
          </div>
          <div class="panel panel-default">
              <div class="panel-body">
-                <p>trends</p>
+                <h5 style="color: grey; font-size: 125%;">Trends</h5>
+                    <a href="">#CloneDoTwitter #1</a><br>
+                        <span style="color: grey;">31k Posts</span><br><br>
+                    <a href="">#RailsWithAngular2</a><br>
+                        <span style="color: grey;">25k Posts</span><br><br>
+                    <a href="">#Android</a><br>
+                        <span style="color: grey;">16k Posts</span><br><br>
             </div>
          </div>
      </div>

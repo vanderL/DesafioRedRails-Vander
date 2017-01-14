@@ -21,6 +21,8 @@ class PagesController < ApplicationController
   end
 
   def explore
-    @posts = Post.all
+     @posts = Post.all
+     @newPost = Post.new
+     @toFollow = User.all.last(5)
   end
 end

@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   get 'post/create'
 
   devise_for :users
+  resources :users do
+      member do
+        get :following, :followers
+      end
+    end
+    resources :relationships, only: [:create, :destroy]
+  
   root 'pages#index'
   resources :posts
   
