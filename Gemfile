@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-
+#gem 'sqlite3'
 gem 'pg'
 gem 'rails_12factor', group: :production
 #bootstrap
