@@ -43,7 +43,7 @@
               <img src="/avatar.png" class="rounded-img" height="50px" width="50px"></img>
             </div>
             <div class="col-sm-11">
-              <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
+              <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).email %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
               <p class="post-content"><%= @p.content %></p>
             </div>
             
@@ -71,8 +71,9 @@
      </div>
      <div class="col-xs-3">
          <div class="panel panel-default">
-           <div class="panel-body">
-             <p>about</p>
+            <div class="panel-body">
+            <p style="opacity: 0.5; font-size: 90%;">About  Help  Blog  Status  Terms  Privacy <a href="https://www.facebook.com/vander.wander">Developer</a> © DesafioRed 2017 </p>
+
            </div>
          </div>
      </div>

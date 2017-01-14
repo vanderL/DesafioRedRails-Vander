@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     end
     @posts = Post.all.where("user_id = ?", User.find(params[:id]))
     @newPost = Post.new
+    @toFollow = User.all.last(5)
   end
 
   def explore
